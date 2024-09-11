@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $title = 'sono un titolo da variabile';
+    $subtitle = 'sono un sottotitolo da variabile';
+
+    $data = [
+        'title' => $title,
+        'subtitle' => $subtitle
+    ];
+    return view('home', $data);
 });
